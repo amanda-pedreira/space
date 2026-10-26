@@ -7,13 +7,21 @@ public class Nave extends Asset {
     }
 
     public Tiro atirar(int poder) {
-        Tiro tiro = ;
+        Tiro tiro = new Tiro(getX(), getY(), 10, Direcao.CIMA, poder);
         return tiro;
     }
 
     @Override
     public void mover() {
-        
+        super.mover();
+
+        if (getX() < 0) {
+            setX(0);
+        }
+
+        if (getX() > 590) {
+            setX(590);
+        }
     }
     
 }

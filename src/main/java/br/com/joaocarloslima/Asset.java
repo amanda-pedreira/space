@@ -20,14 +20,14 @@ public abstract class Asset {
 
     public void mover() {
         if (direcao == Direcao.CIMA) {
-
+            y = y - velocidade;
         } else if (direcao == Direcao.DIREITA) {
-
+            x = x + velocidade;
         } else if (direcao == Direcao.BAIXO) {
-
+            y = y + velocidade;
         } else if (direcao == Direcao.ESQUERDA) {
-
-        } 
+            x = x - velocidade;
+        }
     }
 
     public boolean colidiuCom(Asset asset){
